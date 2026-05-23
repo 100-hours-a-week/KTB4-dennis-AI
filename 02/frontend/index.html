@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>커뮤니티 게시판</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <div>
+        <h1>커뮤니티 게시판</h1>
+        <p>회원가입 없이 작성자 이름으로 글과 댓글을 작성할 수 있습니다.</p>
+      </div>
+
+      <a class="button primary" href="create.html">글 작성</a>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="section-title">
+          <h2>게시글 목록</h2>
+          <button id="refresh-button" class="button secondary" type="button">새로고침</button>
+        </div>
+
+        <div id="loading-message" class="message">게시글을 불러오는 중입니다.</div>
+        <div id="error-message" class="message error hidden"></div>
+        <div id="empty-message" class="message hidden">아직 작성된 게시글이 없습니다.</div>
+
+        <ul id="post-list" class="post-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
